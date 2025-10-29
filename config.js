@@ -3,5 +3,5 @@
 
 const CONFIG = {
   // Change this to your backend server URL (e.g., 'http://your-laptop-ip:3000')
-  API_BASE_URL: 'http://139.180.125.223:61117'
+  API_BASE_URL: 'https://releases-cancel-broken-toner.trycloudflare.com'
 };
