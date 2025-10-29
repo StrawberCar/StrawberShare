@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StrawberShare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">StrawberShare</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search files..." autocomplete="off">
+        <div id="searchResults" class="search-results"></div>
+      </div>
+      <button id="uploadBtn" class="btn-primary">Upload File</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div id="uploadModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Upload File</h2>
+        <form id="uploadForm">
+          <div class="form-group">
+            <label for="fileInput">Choose File</label>
+            <input type="file" id="fileInput" required>
+            <div id="fileName" class="file-name"></div>
+          </div>
+          <div class="form-group">
+            <label>Visibility</label>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="visibility" value="public" checked>
+                Public (appears in feed)
+              </label>
+              <label>
+                <input type="radio" name="visibility" value="link-only">
+                Link Only (direct link access only)
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary" id="submitBtn">Upload</button>
+          <div id="uploadProgress" class="progress-bar" style="display: none;">
+            <div class="progress-fill"></div>
+          </div>
+          <div id="uploadResult" class="upload-result"></div>
+        </form>
+      </div>
+    </div>
+
+    <section id="fileGrid" class="file-grid">
+      <div class="loading">Loading files...</div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
